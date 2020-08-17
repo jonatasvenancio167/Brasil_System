@@ -1,10 +1,13 @@
-# Entre com o nome completo
+require 'date'
 
-print "Digite o seu nome completo: "
+puts "\n----------- Responda os campos e no final aparecerá a resposta de cada campo digitado -----------\n"
+# Comando 1: Entre com o nome completo
+
+print "\nDigite o seu nome completo: "
 
 nome = gets.chomp
 
-# Entre com a data de nascimento
+# Comando 2: Entre com a data de nascimento
 
 print "\nDigite a sua data de nascimento\n"
 print "Dia: "
@@ -26,15 +29,16 @@ end
 print "Ano: "
 ano = gets.chomp.to_i
 
-# Calculando a idade ao cubo
+# Comando 3: Sua idade ao cubo
 
-print "\nEntre com o ano atual: "
+print"\nPara saber a sua idade elevado ao cubo\n"
+print "Entre com o ano atual: "
 ano_atual = gets.chomp.to_i
 
 idade = ano_atual - ano
 idade_cubo = (idade ** 3)
 
-# invertendo uma string
+# Comando 4: receba uma string e imprima ela invertida
 
 print "\nDigite uma palavra ou frase: "
 string = gets.chomp
@@ -43,16 +47,17 @@ def inverte (string)
     puts "\nA inversão da String #{string} é: #{string.reverse}"
 end
 
-# Recebendo uma String e exibir metade dela
+# Comando 5: Recebendo uma String e imprima metade dela
 
-print "Digite uma palavra: "
+print "\nDigite uma palavra: "
 str = gets.chomp
 str.size
+texto = str.slice(0..str.size/2)
 
-# Somatoria da data de nascimento
+# Comando 6: Somatória da data de nascimento
 
 total = 0
-print "Para saber o valor total da sua de nascimento, entre com os valores\n"
+print "\nPara saber o valor total da sua de nascimento, entre com os valores\n"
 for valor in (0..7)
     
     print "valor #{valor}: "
@@ -68,11 +73,12 @@ for valor in (0..7)
 end
 
 # Exibindo os resultados digitados
+puts "\n----------- Resultados suas respostas -----------\n"
 
 puts "\nO seu nome completo é: #{nome}"
-puts "#{dia}/#{mes}/#{ano}"
-puts "Sua idade ao cubo é: #{idade_cubo}"
+puts "\nSua data de nascimento é: #{dia}/#{mes}/#{ano}"
+puts "\nSua idade é: #{ano_atual - ano} e ela elevado ao cubo é: #{idade_cubo}"
 
 inverte (string)
-puts "a metade da string que você digitou, é: #{str.slice(0..str.size/2)}"
-puts "\na sua numerologia é: #{total}"
+puts "\na metade da string #{str} é: #{texto}"
+puts "\na numerologia da sua data de nascimento é: #{total}"
