@@ -1,5 +1,3 @@
-require 'date'
-
 puts "\n----------- Responda os campos e no final aparecerá a resposta de cada campo digitado -----------\n"
 # Comando 1: Entre com o nome completo
 
